@@ -1,6 +1,6 @@
 @import "tailwindcss";
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Mona;
   line-height: 1.5;
   font-weight: 400;
 
@@ -17,3 +17,10 @@
   padding:0;
   box-sizing: border-box;
 } */
+
+
+@font-face {
+  font-family: Mona;
+  src: url('./assets/MonaSans-Regular.ttf');
+  /* font-weight: 800; */
+}
