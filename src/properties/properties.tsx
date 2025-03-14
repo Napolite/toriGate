@@ -1,13 +1,78 @@
 import { useState } from "react";
+import Img1 from "../assets/images/img1.png";
+import Img2 from "../assets/images/img2.png";
+import Img3 from "../assets/images/img3.png";
 
 function Properties() {
-  const [properties, setProperties] = useState<
-    { name: string; value: string }[]
-  >([
+  const images: string[] = [Img1, Img2, Img3];
+  const properties: { name: string; value: string }[] = [
     { name: "Available Properties", value: "300k" },
-    { name: "SoldProperties ", value: "90k" },
+    { name: "Sold Properties ", value: "90k" },
     { name: "Listed Properties", value: "90k" },
-  ]);
+  ];
+
+  const assets = [
+    {
+      image: "img1",
+      status: "Rent",
+      price: "$23.4M/yr",
+      title: "Crystal Brogs residence",
+      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+      beds: 4,
+      baths: 5,
+      area: "400 sq.ft",
+    },
+    {
+      image: "img2",
+      status: "Sale",
+      price: "$23.4M/yr",
+      title: "Crystal Brogs residence",
+      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+      beds: 4,
+      baths: 5,
+      area: "400 sq.ft",
+    },
+    {
+      image: "img3",
+      status: "Sale",
+      price: "$23.4M/yr",
+      title: "Crystal Brogs residence",
+      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+      beds: 4,
+      baths: 5,
+      area: "400 sq.ft",
+    },
+    {
+      image: "img4",
+      status: "Rent",
+      price: "$23.4M/yr",
+      title: "Crystal Brogs residence",
+      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+      beds: 4,
+      baths: 5,
+      area: "400 sq.ft",
+    },
+    {
+      image: "img5",
+      status: "Sale",
+      price: "$23.4M/yr",
+      title: "Crystal Brogs residence",
+      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+      beds: 4,
+      baths: 5,
+      area: "400 sq.ft",
+    },
+    {
+      image: "img6",
+      status: "Rent",
+      price: "$23.4M/yr",
+      title: "Crystal Brogs residence",
+      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+      beds: 4,
+      baths: 5,
+      area: "400 sq.ft",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-[#F7F7F7] pt-[50px] text-[#1e1e1e] pt-[50px]">
@@ -34,6 +99,16 @@ function Properties() {
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="flex justify-between w-full mt-[100px]">
+          {images.map((image, index) => (
+            <img
+              src={image}
+              alt={`property${index}`}
+              className="w-[500px] h-[369px] rounded-[10px]"
+            />
+          ))}
         </div>
       </div>
     </div>
