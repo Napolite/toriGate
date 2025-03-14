@@ -8,7 +8,7 @@ function Landing() {
       // style={{ background: "url('../assets/landingBg.png')" }}
     >
       <NavBar />
-      <div className="w-[80%] m-auto relative top-[35%] translate-y-[-50%]">
+      <div className="w-[86.1%] m-auto relative top-[35%] translate-y-[-50%]">
         <div>
           <p className="text-[18px] font-[500]">
             Explore A Wide Range of properties that suits you

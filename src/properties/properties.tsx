@@ -11,9 +11,9 @@ function Properties() {
 
   return (
     <div className="min-h-screen bg-[#F7F7F7] pt-[50px] text-[#1e1e1e] pt-[50px]">
-      <div className="w-[80%] mx-auto">
-        <div className="flex gap-[214px]">
-          <p className="text-[35px] min-w-[391px] font-[800] h-[129px]">
+      <div className="w-[86.1%] mx-auto">
+        <div className="flex justify-between w-full">
+          <p className="text-[35px] max-w-[391px] font-[800] h-[129px]">
             Experience <br /> Unparalleled Property Search with Torii Gate
           </p>
           <div className="w-[635px] h-[186px] flex flex-col gap-[20px]">
