@@ -21,6 +21,7 @@ function Properties() {
       beds: 4,
       baths: 5,
       area: "400 sq.ft",
+      type: "house",
     },
     {
       image: "img2",
@@ -31,6 +32,7 @@ function Properties() {
       beds: 4,
       baths: 5,
       area: "400 sq.ft",
+      type: "apartment",
     },
     {
       image: "img3",
@@ -41,6 +43,7 @@ function Properties() {
       beds: 4,
       baths: 5,
       area: "400 sq.ft",
+      type: "land",
     },
     {
       image: "img4",
@@ -51,6 +54,7 @@ function Properties() {
       beds: 4,
       baths: 5,
       area: "400 sq.ft",
+      type: "apartment",
     },
     {
       image: "img5",
@@ -61,6 +65,7 @@ function Properties() {
       beds: 4,
       baths: 5,
       area: "400 sq.ft",
+      type: "house",
     },
     {
       image: "img6",
@@ -71,6 +76,7 @@ function Properties() {
       beds: 4,
       baths: 5,
       area: "400 sq.ft",
+      type: "land",
     },
   ];
 
@@ -109,6 +115,32 @@ function Properties() {
               className="w-[500px] h-[369px] rounded-[10px]"
             />
           ))}
+        </div>
+
+        <div className="mt-[100px]">
+          <p className="text-[35px] font-[800]">Property Listing</p>
+          <div className="mt-[30px]">
+            <nav className="flex w-[650px] h-[48px] gap-[30px]">
+              <div className="w-[63px] h-full ring-1 ring-[#535353] rounded-[8px] flex place-items-center justify-center text-[#1d1d1d] font-[600]">
+                All
+              </div>
+              <div className="w-[97px] h-full ring-1 ring-[#535353] rounded-[8px] flex place-items-center justify-center text-[#1d1d1d] font-[600]">
+                House
+              </div>
+              <div className="w-[136px] h-full ring-1 ring-[#535353] rounded-[8px] flex place-items-center justify-center text-[#1d1d1d] font-[600]">
+                Apartment
+              </div>
+              <div className="w-[85px] h-full ring-1 ring-[#535353] rounded-[8px] flex place-items-center justify-center text-[#1d1d1d] font-[600]">
+                Land
+              </div>
+            </nav>
+          </div>
+          {/* Properties */}
+          <div>
+            {assets.map((asset, index) => (
+              <div></div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
