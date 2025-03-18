@@ -13,7 +13,7 @@ function Properties() {
 
   const assets = [
     {
-      image: "img1",
+      image: Img1,
       status: "Rent",
       price: "$23.4M/yr",
       title: "Crystal Brogs residence",
@@ -24,7 +24,7 @@ function Properties() {
       type: "house",
     },
     {
-      image: "img2",
+      image: Img1,
       status: "Sale",
       price: "$23.4M/yr",
       title: "Crystal Brogs residence",
@@ -35,7 +35,7 @@ function Properties() {
       type: "apartment",
     },
     {
-      image: "img3",
+      image: Img1,
       status: "Sale",
       price: "$23.4M/yr",
       title: "Crystal Brogs residence",
@@ -46,7 +46,7 @@ function Properties() {
       type: "land",
     },
     {
-      image: "img4",
+      image: Img1,
       status: "Rent",
       price: "$23.4M/yr",
       title: "Crystal Brogs residence",
@@ -57,7 +57,7 @@ function Properties() {
       type: "apartment",
     },
     {
-      image: "img5",
+      image: Img1,
       status: "Sale",
       price: "$23.4M/yr",
       title: "Crystal Brogs residence",
@@ -68,7 +68,7 @@ function Properties() {
       type: "house",
     },
     {
-      image: "img6",
+      image: Img1,
       status: "Rent",
       price: "$23.4M/yr",
       title: "Crystal Brogs residence",
@@ -138,7 +138,14 @@ function Properties() {
           {/* Properties */}
           <div>
             {assets.map((asset, index) => (
-              <div></div>
+              <div>
+                <img src={asset?.image} />{" "}
+                <div>
+                  <div>{asset?.price}</div>
+                  <div>{asset?.title}</div>
+                  <div>{asset?.address}</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
