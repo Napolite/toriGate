@@ -4,7 +4,7 @@ function PropertiesList({ assets }: { assets: any[] }) {
   return (
     <div className="full">
       <div className="grid grid-cols-4 gap-[30px] mt-[30px] pb-[100px]">
-        {assets.map((asset, index) => (
+        {assets.map((asset) => (
           <div className="w-full ">
             <img
               src={asset?.image}

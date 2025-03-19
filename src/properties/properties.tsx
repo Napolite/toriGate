@@ -1,7 +1,15 @@
 import Img1 from "../assets/images/img1.png";
 import Img2 from "../assets/images/img2.png";
 import Img3 from "../assets/images/img3.png";
+import Big1 from "../assets/images/Big1.png";
+import Big2 from "../assets/images/Big2.png";
+import Big3 from "../assets/images/Big3.png";
+import Big4 from "../assets/images/Big4.png";
+
+import { SlLocationPin } from "react-icons/sl";
+
 import PropertiesList from "./property.list";
+import { LuBath, LuBedDouble } from "react-icons/lu";
 
 function Properties() {
   const images: string[] = [Img1, Img2, Img3];
@@ -102,6 +110,45 @@ function Properties() {
     },
   ];
 
+  const commercialAssets = [
+    {
+      image: Big1,
+      title: "Boston Brown Hall",
+      price: "$56,982",
+      area: "400 sq.ft",
+      beds: 4,
+      baths: 5,
+      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+    },
+    {
+      image: Big2,
+      title: "Boston Brown Hall",
+      price: "$56,982",
+      area: "400 sq.ft",
+      beds: 4,
+      baths: 5,
+      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+    },
+    {
+      image: Big3,
+      title: "Boston Brown Hall",
+      price: "$56,982",
+      area: "400 sq.ft",
+      beds: 4,
+      baths: 5,
+      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+    },
+    {
+      image: Big4,
+      title: "Boston Brown Hall",
+      price: "$56,982",
+      area: "400 sq.ft",
+      beds: 4,
+      baths: 5,
+      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#F7F7F7] pt-[50px] text-[#1e1e1e] pt-[50px]">
       <div className="w-[86.1%] mx-auto">
@@ -159,6 +206,58 @@ function Properties() {
           </div>
           {/* Properties */}
           <PropertiesList assets={assets} />
+
+          {/* Explore commetcial properties*/}
+          <div className="grid grid-cols-2 gap-[20px]">
+            {commercialAssets.map((asset) => (
+              <div className="relative w-full">
+                <img src={asset.image} className="w-full rounded-[12px]" />
+                <div className="absolute w-[90%] h-[180px] py-[20px] z-1000 top-[50%] left-[50%] translate-x-[-50%] rounded-[8px] bg-[rgba(256,256,256,0.7)]">
+                  <div className="flex justify-between px-[20px]">
+                    <div>
+                      <p>{asset?.title}</p>
+                      <p>
+                        <strong className="inline text-[20px] font-[600]">
+                          {asset?.price}
+                        </strong>
+                        /day
+                      </p>
+                    </div>
+                    <div>
+                      <div className="grid grid-cols-2 gap-[17px]">
+                        <div>
+                          <p className="inline">王</p>
+                          {asset?.area}
+                        </div>
+                        <div>
+                          <p className="inline-block rotate-90">王</p>{" "}
+                          {asset?.area}
+                        </div>
+                        <div className="flex items-center content-center gap-[5px]">
+                          <LuBedDouble />
+                          <p>{asset?.beds} beds</p>
+                        </div>
+                        <div className="flex flex items-center content-center gap-[5px]">
+                          <LuBath /> <p>{asset?.baths} bath</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between p-[20px] items-center content-center">
+                    <div className="flex items-center content-center gap-[5px] text-[18px] font-[500]">
+                      <SlLocationPin />
+                      <p>{asset?.address}</p>
+                    </div>
+                    <div>
+                      <button className="w-[123px] h-[48px] bg-[#1e1e1e] text-white rounded-[8px]">
+                        Explore
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
