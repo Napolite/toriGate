@@ -1,7 +1,7 @@
-import { useState } from "react";
 import Img1 from "../assets/images/img1.png";
 import Img2 from "../assets/images/img2.png";
 import Img3 from "../assets/images/img3.png";
+import { LuBedDouble, LuBath } from "react-icons/lu";
 
 function Properties() {
   const images: string[] = [Img1, Img2, Img3];
@@ -15,68 +15,90 @@ function Properties() {
     {
       image: Img1,
       status: "Rent",
-      price: "$23.4M/yr",
-      title: "Crystal Brogs residence",
-      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
+      price: "$23.4M",
+      title: "Crystal Brogs Residence",
+      address: "22, Mabadieje, Iowa, Garage, IKD, Lagos",
       beds: 4,
       baths: 5,
       area: "400 sq.ft",
       type: "house",
     },
     {
-      image: Img1,
+      image: Img2,
       status: "Sale",
-      price: "$23.4M/yr",
-      title: "Crystal Brogs residence",
-      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
-      beds: 4,
-      baths: 5,
-      area: "400 sq.ft",
+      price: "$18.2M",
+      title: "Sunset Villas",
+      address: "45, Ocean Drive, Victoria Island, Lagos",
+      beds: 3,
+      baths: 4,
+      area: "350 sq.ft",
       type: "apartment",
     },
     {
-      image: Img1,
+      image: Img3,
       status: "Sale",
-      price: "$23.4M/yr",
-      title: "Crystal Brogs residence",
-      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
-      beds: 4,
-      baths: 5,
-      area: "400 sq.ft",
+      price: "$12M",
+      title: "Golden Acres Land",
+      address: "10, Lekki Phase 1, Lagos",
+      beds: 0,
+      baths: 0,
+      area: "1200 sq.ft",
       type: "land",
     },
     {
       image: Img1,
       status: "Rent",
-      price: "$23.4M/yr",
-      title: "Crystal Brogs residence",
-      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
-      beds: 4,
-      baths: 5,
-      area: "400 sq.ft",
+      price: "$5M",
+      title: "Luxury Heights Apartment",
+      address: "88, Bourdillon Road, Ikoyi, Lagos",
+      beds: 2,
+      baths: 3,
+      area: "300 sq.ft",
       type: "apartment",
     },
     {
-      image: Img1,
+      image: Img2,
       status: "Sale",
-      price: "$23.4M/yr",
-      title: "Crystal Brogs residence",
-      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
-      beds: 4,
-      baths: 5,
-      area: "400 sq.ft",
+      price: "$45M",
+      title: "Palm View Estate",
+      address: "12, Banana Island, Lagos",
+      beds: 6,
+      baths: 7,
+      area: "800 sq.ft",
       type: "house",
     },
     {
-      image: Img1,
+      image: Img3,
       status: "Rent",
-      price: "$23.4M/yr",
-      title: "Crystal Brogs residence",
-      address: "22, mabadieje, Iowa, Garage, ikd, lagos",
-      beds: 4,
-      baths: 5,
-      area: "400 sq.ft",
+      price: "$3.2M",
+      title: "Meadow Land",
+      address: "90, Ajah, Lagos",
+      beds: 0,
+      baths: 0,
+      area: "1500 sq.ft",
       type: "land",
+    },
+    {
+      image: Img1,
+      status: "Sale",
+      price: "$9.8M",
+      title: "Silver Crest Apartment",
+      address: "15, Ikeja GRA, Lagos",
+      beds: 4,
+      baths: 4,
+      area: "450 sq.ft",
+      type: "apartment",
+    },
+    {
+      image: Img2,
+      status: "Rent",
+      price: "$7.5M",
+      title: "Urban Elite House",
+      address: "70, Ikorodu Road, Lagos",
+      beds: 5,
+      baths: 6,
+      area: "500 sq.ft",
+      type: "house",
     },
   ];
 
@@ -136,14 +158,31 @@ function Properties() {
             </nav>
           </div>
           {/* Properties */}
-          <div>
+          <div className="grid grid-cols-4 gap-[30px] mt-[30px] pb-[100px]">
             {assets.map((asset, index) => (
-              <div>
-                <img src={asset?.image} />{" "}
+              <div className="w-full ">
+                <img
+                  src={asset?.image}
+                  className="rounded-[8px] w-full h-[295.4px]"
+                />
                 <div>
-                  <div>{asset?.price}</div>
-                  <div>{asset?.title}</div>
-                  <div>{asset?.address}</div>
+                  <div className="text-[20px] font-[600] mb-[8px] mt-[10px]">
+                    {asset?.price}/yr
+                  </div>
+                  <div className="text-[16px] font-[600] mb-[5px]">
+                    {asset?.title}
+                  </div>
+                  <div className="text-[14px] mb-[10px]">{asset?.address}</div>
+                  <div className="flex items-center contenr-center gap-[22px]">
+                    <div className="flex items-center content-center gap-[5px]">
+                      <LuBedDouble />
+                      <p>{asset?.beds} beds</p>
+                    </div>
+                    <div className="flex flex items-center content-center gap-[5px]">
+                      <LuBath /> <p>{asset?.baths} baths</p>
+                    </div>
+                    <div>王 {asset?.area}</div>
+                  </div>
                 </div>
               </div>
             ))}
