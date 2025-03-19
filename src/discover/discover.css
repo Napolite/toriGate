@@ -1,0 +1,8 @@
+.discover{
+    background: url('../assets/images/img1.png');
+    background-size: cover; /* Keeps the image from stretching */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center;
+    background-color: red;
+    
+}
