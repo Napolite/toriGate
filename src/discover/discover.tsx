@@ -1,4 +1,3 @@
-import React from "react";
 import "./discover.css";
 function Discover() {
   return (

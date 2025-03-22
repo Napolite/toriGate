@@ -18,9 +18,30 @@
   box-sizing: border-box;
 } */
 
+.footer-text {
+ background-image: url('./assets/images/Big1.png'); /* Replace with your image URL */
+  -webkit-background-clip: text; /* For older browsers */
+  background-clip: text;
+  color: transparent; 
+  font-size:230.79px;
+  text-align: center;/* Make the text color transparent */
+}
+
 
 @font-face {
   font-family: Mona;
   src: url('./assets/MonaSans-Regular.ttf');
   /* font-weight: 800; */
+}
+
+
+.animate-scale{
+  animation: scaleUp linear;
+  animation-timeline: view(-30px) ;
+}
+
+@keyframes scaleUp {
+  to{
+    margin-bottom:-20px;
+  }
 }
