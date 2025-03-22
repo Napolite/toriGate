@@ -37,11 +37,11 @@
 
 .animate-scale{
   animation: scaleUp linear;
-  animation-timeline: view(-30px) ;
+  animation-timeline: view(-50px) ;
 }
 
 @keyframes scaleUp {
   to{
-    margin-bottom:-20px;
+    margin-bottom:100px;
   }
 }
