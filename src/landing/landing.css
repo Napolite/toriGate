@@ -1,4 +1,13 @@
-.landing{
-    background: url('../assets/landingBg.png');
-    background-size: cover;
+.scale-forward{
+    animation: scaleForward linear;
+    animation-timeline: view();
+    scale:1 1.5;
+    /* overflow: hidden; */
+}
+
+@keyframes scaleForward {
+  
+    to {
+        scale:1 1;
+    }
 }
