@@ -1,6 +1,4 @@
-import React from "react";
 import HouseFooter from "./assets/images/house 1 1.png";
-import { ImInstagram } from "react-icons/im";
 import {
   FaInstagram,
   FaFacebookF,
